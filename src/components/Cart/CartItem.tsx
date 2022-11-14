@@ -1,14 +1,18 @@
+import { FC } from 'react';
+
+import { ICartItemComponent } from '../../interfaces';
 import classes from './CartItem.module.css';
 
-const CartItem = props => {
-  const { title, quantity, total, price } = props.item;
+const CartItem: FC<ICartItemComponent> = ({ item }) => {
+  const { title, quantity, total, price } = item;
 
   return (
     <li className={classes.item}>
       <header>
         <h3>{title}</h3>
         <div className={classes.price}>
-          ${total.toFixed(2)} <span className={classes['item-price']}>(${price.toFixed(2)}/item)</span>
+          ${total.toFixed(2)}{' '}
+          <span className={classes['item-price']}>(${price.toFixed(2)}/item)</span>
         </div>
       </header>
       <div className={classes.details}>

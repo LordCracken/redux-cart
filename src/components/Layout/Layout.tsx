@@ -1,6 +1,10 @@
+import { FC } from 'react';
+
 import MainHeader from './MainHeader';
 
-const Layout = ({ children }) => {
+import { ILayout } from '../../interfaces';
+
+const Layout: FC<ILayout> = ({ children }) => {
   return (
     <>
       <MainHeader />

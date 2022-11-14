@@ -3,7 +3,7 @@ import CartItem from './CartItem';
 
 import classes from './Cart.module.css';
 
-const Cart = props => {
+const Cart = () => {
   return (
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
