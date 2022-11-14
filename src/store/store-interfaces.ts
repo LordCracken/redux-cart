@@ -14,4 +14,5 @@ export interface IUiSlice {
 export interface ICartSlice {
   items: ICartItem[];
   totalQuantity: number;
+  changed?: boolean;
 }
