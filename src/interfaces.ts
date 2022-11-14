@@ -1,5 +1,11 @@
 import { ReactNode } from 'react';
 
+export interface INotification {
+  title: string;
+  status: string;
+  message: string;
+}
+
 export interface ICartItem {
   id: string;
   title: string;

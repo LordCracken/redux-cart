@@ -4,10 +4,18 @@ import { IUiSlice } from './store-interfaces';
 
 const uiSlice = createSlice({
   name: 'ui',
-  initialState: { cartIsVisible: false } as IUiSlice,
+  initialState: { cartIsVisible: false, notification: null } as IUiSlice,
   reducers: {
     toggle(state) {
       state.cartIsVisible = !state.cartIsVisible;
+    },
+    showNotification(state, action) {
+      const { status, title, message } = action.payload;
+      state.notification = {
+        status,
+        title,
+        message,
+      };
     },
   },
 });
