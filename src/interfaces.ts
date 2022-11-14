@@ -5,6 +5,7 @@ export interface ICartItem {
   quantity: number;
   total: number;
   price: number;
+  id?: string;
 }
 
 export interface ILayout {
