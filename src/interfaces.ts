@@ -1,11 +1,18 @@
 import { ReactNode } from 'react';
 
 export interface ICartItem {
+  id: string;
   title: string;
   quantity: number;
   total: number;
   price: number;
-  id?: string;
+}
+
+export interface IProductItem {
+  id: string;
+  title: string;
+  price: number;
+  description: string;
 }
 
 export interface ILayout {
@@ -15,14 +22,4 @@ export interface ILayout {
 export interface ICard {
   children: ReactNode;
   className?: string;
-}
-
-export interface ICartItemComponent {
-  item: ICartItem;
-}
-
-export interface IProductItem {
-  title: string;
-  price: number;
-  description: string;
 }

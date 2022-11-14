@@ -1,4 +1,4 @@
-import {ICartItem} from "../interfaces";
+import { ICartItem } from '../interfaces';
 
 export interface IUiSlice {
   cartIsVisible: boolean;
